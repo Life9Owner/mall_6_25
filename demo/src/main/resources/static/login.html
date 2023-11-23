@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malllogin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+
+        html, body{
+            height:100%
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="card col-4" >
+            <div class="card-header">
+                登录
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="phone" class="form-control" id="phone" aria-describedby="PhoneHelp" >
+
+                        <small id="PhoneHelp" class="form-text text-muted">Please input your phone number!</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="verifyCode">Captcha</label>
+                        <div class="input-group" >
+                            <input type="number" class="form-control" id="verifyCode">
+
+                            <span class="input-group-append with-space">
+                                <img id="captcha" src="/common/captcha" alt="Captcha" onclick="$('#captcha').attr('src','/common/captcha')">
+                            </span>
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+<script>
+
+    $(function(){
+        $('form').submit(function(e){
+
+            e.preventDefault();
+
+            $.ajax({
+                url: "/user/login",
+                type: "post",
+                data: {
+
+                    phone: $('#phone').val(),
+                    password: $('#exampleInputPassword1').val(),
+                    VerifyCode: $('#verifyCode').val()
+                },
+
+                success: function(result) {
+                    if (result.code == 200) {
+<!--                        window.location.href = "/myprofile.html";-->
+                            window.location.href="/admin.html";
+                    } else {
+
+                        alert(result.message);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+
+</html>
