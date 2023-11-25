@@ -39,12 +39,14 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         productLambdaQueryWrapper.like(name!=null,Product::getTitle,name).
                 eq(categoryId!=null,Product::getCategoryId,categoryId);
         List<Product> products=productMapper.selectPage(productPage,productLambdaQueryWrapper).getRecords();
+//        List<Product> products=productMapper.selectPage(productPage,null).getRecords();
         List<ProductVo> productVos=BeanCopyUtils.copyBeanList(products,ProductVo.class);
         for(ProductVo productVo: productVos)
         {
             productVo.setCategoryName(categoryMapper.selectById(productVo.getCategoryId()).getName());
         }
         return ResponseResult.okResult(productVos);
+
     }
     @Override
     public ResponseResult getProduct(Integer id) {

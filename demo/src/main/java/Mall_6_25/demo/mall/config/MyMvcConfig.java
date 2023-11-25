@@ -10,8 +10,8 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         WebMvcConfigurer.super.addInterceptors(registry);
-        registry.addInterceptor(new Login_interceptor()).addPathPatterns("/*/admin/**");
-        registry.addInterceptor(new Login_interceptor()).addPathPatterns("/admin*");
+//        registry.addInterceptor(new Login_interceptor()).addPathPatterns("/*/admin/**");
+//        registry.addInterceptor(new Login_interceptor()).addPathPatterns("/admin*");
 
     }
 }

@@ -1,0 +1,23 @@
+.hwid-html-minheight {
+    min-height: 100%;
+    position: relative;
+}
+.hwid-content-height {
+    height: 100%;
+}
+.hwid-body-margin {
+    margin: 0;
+}
+.hwid-carlogin-height {
+    height: 98%;
+}
+.hwid-black-bg {
+    background: #000;
+}
+.hwid-hide-content {
+    display: none;
+}
+/*#userdata_el.inputBehavior {*/
+/*    behavior: 'url(#default#userData)'*/
+/*}*/
+

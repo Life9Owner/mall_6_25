@@ -1,5 +1,8 @@
 package Mall_6_25.demo.mall.damain;
+import lombok.Getter;
+
 import java.io.Serializable;
+@Getter
 public class ResponseResult<T> implements Serializable {
 
     private int code;
@@ -25,6 +28,7 @@ public class ResponseResult<T> implements Serializable {
         return responseResult;
     }
 
+
     public static ResponseResult okResult(Object data) {
         ResponseResult responseResult = new ResponseResult();
         responseResult.setCode(DEFAULT_SUCCESS_CODE);
@@ -32,6 +36,14 @@ public class ResponseResult<T> implements Serializable {
         responseResult.setData(data);
         return responseResult;
     }
+    public static ResponseResult myokResult(String data) {
+        ResponseResult responseResult = new ResponseResult();
+        responseResult.setCode(DEFAULT_SUCCESS_CODE);
+        responseResult.setMessage(DEFAULT_SUCCESS_MESSAGE);
+        responseResult.setData(data);
+        return responseResult;
+    }
+
 
     public static ResponseResult failResult(){
         ResponseResult responseResult = new ResponseResult();
@@ -57,24 +69,12 @@ public class ResponseResult<T> implements Serializable {
     public ResponseResult() {
     }
 
-    public int getCode() {
-        return code;
-    }
-
     public void setCode(int code) {
         this.code = code;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public T getData() {
-        return data;
     }
 
     public void setData(T data) {

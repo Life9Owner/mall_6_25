@@ -26,7 +26,7 @@ public class ProductController {
     public ResponseResult
     getProductList(@RequestParam(required = false) String name, @RequestParam(required = false) Integer categoryId,
                 @RequestParam(defaultValue = "1") Integer pageNum,
-                @RequestParam(defaultValue = "5") Integer pageSize)
+                @RequestParam(defaultValue = "10") Integer pageSize)
     {
         return productService.getProductList(name,categoryId,pageNum,pageSize);
     }
