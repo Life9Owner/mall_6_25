@@ -1,0 +1,11 @@
+.flow-right
+{
+    float:right;
+}
+.flow-left
+{
+    float:left;
+}
+.cls{
+    clear: both;
+}

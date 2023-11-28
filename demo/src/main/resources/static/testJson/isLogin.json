@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "id": 4,
+    "phone": "13859876326",
+    "nickName": "邹嘉豪"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": [
+    {
+      "id": 1,
+      "code": "P008",
+      "title": "衬衫",
+      "categoryId": 2,
+      "categoryName": "电脑",
+      "img": "https://example.com/product3.jpg",
+      "price": 88.00,
+      "stocks": 100,
+      "description": "This is a Shirt"
+    },
+    {
+      "id": 2,
+      "code": "P005",
+      "title": "华为mate",
+      "categoryId": 2,
+      "categoryName": "电脑",
+      "img": "https://example.com/product4.jpg",
+      "price": 2999.00,
+      "stocks": 20,
+      "description": "This is a phone."
+    },
+    {
+      "id": 3,
+      "code": "P0033",
+      "title": "游戏机",
+      "categoryId": 3,
+      "categoryName": "秋装",
+      "img": "https://example.com/product8.jpg",
+      "price": 99.00,
+      "stocks": 33,
+      "description": "232"
+    },
+    {
+      "id": 4,
+      "code": "213",
+      "title": "饼干",
+      "categoryId": 3,
+      "categoryName": "秋装",
+      "img": "",
+      "price": 21.00,
+      "stocks": 21,
+      "description": "21"
+    },
+    {
+      "id": 5,
+      "code": "213232",
+      "title": "蛋糕",
+      "categoryId": 2,
+      "categoryName": "电脑",
+      "img": "",
+      "price": 21.00,
+      "stocks": 21,
+      "description": "12"
+    },
+    {
+      "id": 7,
+      "code": "21221112",
+      "title": "荔枝",
+      "categoryId": 1,
+      "categoryName": "服饰",
+      "img": null,
+      "price": 123.00,
+      "stocks": 31,
+      "description": "21"
+    },
+    {
+      "id": 8,
+      "code": "2122111212",
+      "title": "牛奶",
+      "categoryId": 2,
+      "categoryName": "电脑",
+      "img": "",
+      "price": 123.00,
+      "stocks": 31,
+      "description": "delicious\n"
+    },
+    {
+      "id": 9,
+      "code": "21323232",
+      "title": "蛋糕",
+      "categoryId": 3,
+      "categoryName": "秋装",
+      "img": "",
+      "price": 21.00,
+      "stocks": 21,
+      "description": "12"
+    },
+    {
+      "id": 11,
+      "code": "21299912",
+      "title": "牛奶",
+      "categoryId": 2,
+      "categoryName": "电脑",
+      "img": "",
+      "price": 123.00,
+      "stocks": 31,
+      "description": "13"
+    },
+    {
+      "id": 12,
+      "code": "212999129",
+      "title": "汉堡",
+      "categoryId": 3,
+      "categoryName": "秋装",
+      "img": "",
+      "price": 123.00,
+      "stocks": 31,
+      "description": "12"
+    }
+  ]
+}
